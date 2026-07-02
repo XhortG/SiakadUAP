@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Profil MD3 layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/md_background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Profil Mahasiswa"
+        app:titleTextColor="@color/md_on_primary"
+        app:navigationIcon="@drawable/ic_back_white"
+        android:background="@color/md_primary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Avatar / Logo Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/md_primary_container"
+                app:strokeWidth="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="28dp">
+
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:gravity="center"
+                        android:background="@drawable/circle_bg_white">
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/uap_logo"
+                            android:scaleType="centerInside"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvNamaProfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_on_primary_container"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <TextView
+                        android:id="@+id/tvProdiProfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="13sp"
+                        android:textColor="@color/md_on_primary_container"
+                        android:alpha="0.7"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Info Cards -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/md_outline_variant">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <!-- NPM Row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="NPM" android:textColor="@color/md_on_surface_variant" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvNimProfil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:textColor="@color/md_on_surface" android:textSize="15sp" android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/md_outline_variant" android:layout_marginBottom="16dp"/>
+
+                    <!-- Email Row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Email" android:textColor="@color/md_on_surface_variant" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvEmailProfil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:textColor="@color/md_on_surface" android:textSize="15sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                    
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/md_outline_variant" android:layout_marginBottom="12dp"/>
+
+                    <!-- Fakultas Row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Fakultas" android:textColor="@color/md_on_surface_variant" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvFakultasProfil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:textColor="@color/md_on_surface" android:textSize="15sp" android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/md_outline_variant" android:layout_marginBottom="12dp"/>
+
+                    <!-- Semester Row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Semester" android:textColor="@color/md_on_surface_variant" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvSemesterProfil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:textColor="@color/md_on_surface" android:textSize="15sp" android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/md_outline_variant" android:layout_marginBottom="12dp"/>
+
+                    <!-- Tahun Masuk Row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tahun Masuk" android:textColor="@color/md_on_surface_variant" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvTahunMasukProfil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:textColor="@color/md_on_surface" android:textSize="15sp" android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/md_outline_variant" android:layout_marginBottom="12dp"/>
+
+                    <!-- Status Row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Status" android:textColor="@color/md_on_surface_variant" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvStatusProfil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:textColor="@color/md_on_surface" android:textSize="15sp" android:textStyle="bold" android:textColorHint="@color/success_green"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Logout Button -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Keluar Akun"
+                android:onClick="logout"
+                android:backgroundTint="@color/md_error"
+                android:textColor="@color/md_on_error"
+                app:cornerRadius="12dp"
+                android:layout_marginTop="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

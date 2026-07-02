@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MD3 Primary: Deep Monochrome Purple -->
+    <color name="md_primary">#4A148C</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_primary_container">#673AB7</color>
+    <color name="md_on_primary_container">#FFFFFF</color>
+
+    <!-- MD3 Secondary: Medium Purple -->
+    <color name="md_secondary">#7E57C2</color>
+    <color name="md_on_secondary">#FFFFFF</color>
+    <color name="md_secondary_container">#D1C4E9</color>
+    <color name="md_on_secondary_container">#311B92</color>
+
+    <!-- MD3 Tertiary: Light Purple Accent -->
+    <color name="md_tertiary">#9575CD</color>
+    <color name="md_on_tertiary">#FFFFFF</color>
+    <color name="md_tertiary_container">#EDE7F6</color>
+    <color name="md_on_tertiary_container">#4527A0</color>
+
+    <!-- MD3 Surface / Background -->
+    <color name="md_background">#F8F6FA</color>
+    <color name="md_surface">#FFFFFF</color>
+    <color name="md_surface_variant">#EFEAFA</color>
+    <color name="md_on_surface">#1A1821</color>
+    <color name="md_on_surface_variant">#48454E</color>
+    <color name="md_outline">#78757E</color>
+    <color name="md_outline_variant">#C8C5CE</color>
+
+    <!-- MD3 Error -->
+    <color name="md_error">#B3261E</color>
+    <color name="md_error_container">#F9DEDC</color>
+    <color name="md_on_error">#FFFFFF</color>
+
+    <!-- Semantic / Utility -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1C1B1F</color>
+    <color name="success_green">#2E7D32</color>
+    <color name="success_container">#E8F5E9</color>
+
+    <!-- Legacy aliases for backward-compat in older XMLs -->
+    <color name="purple_500">@color/md_primary</color>
+    <color name="purple_700">@color/md_on_primary_container</color>
+    <color name="blue">@color/md_secondary</color>
+    <color name="grey">@color/md_background</color>
+    <color name="colorPrimary">@color/md_primary</color>
+    <color name="colorPrimaryDark">@color/md_on_primary_container</color>
+    <color name="colorAccent">@color/md_secondary</color>
+</resources>

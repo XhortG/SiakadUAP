@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DetailBeritaActivity MD3 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/md_background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Detail Berita"
+        app:titleTextColor="@color/md_on_primary"
+        app:navigationIcon="@drawable/ic_back_white"
+        android:background="@color/md_primary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Chip tanggal -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tvTanggalDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Tanggal"
+                style="@style/Widget.Material3.Chip.Assist"
+                app:chipBackgroundColor="@color/md_secondary_container"
+                android:textColor="@color/md_on_secondary_container"
+                android:enabled="false"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/tvJudulDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Judul Berita"
+                android:textColor="@color/md_on_surface"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_outline_variant"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/tvIsiDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Isi lengkap..."
+                android:textColor="@color/md_on_surface"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
