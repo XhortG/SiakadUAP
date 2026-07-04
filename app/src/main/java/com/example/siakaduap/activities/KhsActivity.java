@@ -97,7 +97,7 @@ public class KhsActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<KhsResponse> call, Throwable t) {
                 swipeRefresh.setRefreshing(false);
-                Snackbar.make(findViewById(android.R.id.content), "Maaf, server akademik sedang dalam pemeliharaan.", Snackbar.LENGTH_INDEFINITE)
+                Snackbar.make(findViewById(android.R.id.content), "Tidak ada koneksi internet. Silakan coba lagi.", Snackbar.LENGTH_INDEFINITE)
                         .setAction("Coba Lagi", v -> loadKhs())
                         .show();
             }

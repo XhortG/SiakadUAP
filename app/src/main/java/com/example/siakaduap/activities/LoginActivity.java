@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
                 btnLogin.setEnabled(true);
-                Snackbar.make(findViewById(android.R.id.content), "Maaf, server akademik sedang dalam pemeliharaan.", Snackbar.LENGTH_INDEFINITE)
+                Snackbar.make(findViewById(android.R.id.content), "Tidak ada koneksi internet. Silakan coba lagi.", Snackbar.LENGTH_INDEFINITE)
                         .setAction("Coba Lagi", v -> loginUser())
                         .show();
             }

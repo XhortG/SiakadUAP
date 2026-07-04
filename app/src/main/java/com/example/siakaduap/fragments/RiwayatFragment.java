@@ -83,7 +83,7 @@ public class RiwayatFragment extends Fragment {
             public void onFailure(Call<RiwayatResponse> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
                 if (getView() != null) {
-                    Snackbar.make(getView(), "Maaf, server akademik sedang dalam pemeliharaan.", Snackbar.LENGTH_INDEFINITE)
+                    Snackbar.make(getView(), "Tidak ada koneksi internet. Silakan coba lagi.", Snackbar.LENGTH_INDEFINITE)
                             .setAction("Coba Lagi", v -> loadRiwayat())
                             .show();
                 }
