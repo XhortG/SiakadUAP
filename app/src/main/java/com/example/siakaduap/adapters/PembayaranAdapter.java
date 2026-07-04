@@ -90,7 +90,7 @@ public class PembayaranAdapter extends RecyclerView.Adapter<PembayaranAdapter.Pe
 
                 @Override
                 public void onFailure(Call<LoginResponse> call, Throwable t) {
-                    Toast.makeText(context, "Koneksi gagal", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Koneksi gagal, silakan coba lagi", Toast.LENGTH_SHORT).show();
                     holder.btnBayar.setEnabled(true);
                     holder.btnBayar.setText("Bayar Sekarang");
                 }

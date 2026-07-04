@@ -120,14 +120,14 @@ public class BeritaActivity extends AppCompatActivity {
                     }
                 } else {
                     tvEmpty.setVisibility(View.VISIBLE);
-                    tvEmpty.setText("Respons server tidak valid");
+                    tvEmpty.setText("Maaf, server akademik sedang sibuk.");
                 }
             }
 
             @Override
             public void onFailure(Call<BeritaResponse> call, Throwable t) {
                 swipeRefresh.setRefreshing(false);
-                Snackbar.make(findViewById(android.R.id.content), "Koneksi gagal. Periksa server Anda.", Snackbar.LENGTH_INDEFINITE)
+                Snackbar.make(findViewById(android.R.id.content), "Tidak ada koneksi internet. Silakan coba lagi.", Snackbar.LENGTH_INDEFINITE)
                         .setAction("Coba Lagi", v -> loadBerita())
                         .show();
             }

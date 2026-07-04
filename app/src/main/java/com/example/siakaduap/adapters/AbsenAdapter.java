@@ -94,7 +94,7 @@ public class AbsenAdapter extends RecyclerView.Adapter<AbsenAdapter.AbsenViewHol
                 @Override
                 public void onFailure(Call<LoginResponse> call, Throwable t) {
                     button.setEnabled(true);
-                    Toast.makeText(context, "Koneksi gagal", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Koneksi gagal, silakan coba lagi", Toast.LENGTH_SHORT).show();
                 }
             });
         });

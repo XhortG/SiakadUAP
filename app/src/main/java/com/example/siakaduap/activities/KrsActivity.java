@@ -97,14 +97,14 @@ public class KrsActivity extends AppCompatActivity {
                         showEmpty(response.body().getMessage());
                     }
                 } else {
-                    Snackbar.make(findViewById(android.R.id.content), "Respons server tidak valid", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(android.R.id.content), "Maaf, server akademik sedang sibuk.", Snackbar.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<KrsResponse> call, Throwable t) {
                 swipeRefresh.setRefreshing(false);
-                Snackbar.make(findViewById(android.R.id.content), "Koneksi gagal. Periksa server Anda.", Snackbar.LENGTH_INDEFINITE)
+                Snackbar.make(findViewById(android.R.id.content), "Tidak ada koneksi internet. Silakan coba lagi.", Snackbar.LENGTH_INDEFINITE)
                         .setAction("Coba Lagi", v -> loadKrs())
                         .show();
             }
@@ -143,7 +143,7 @@ public class KrsActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 swipeRefresh.setRefreshing(false);
-                Toast.makeText(KrsActivity.this, "Koneksi gagal", Toast.LENGTH_SHORT).show();
+                Toast.makeText(KrsActivity.this, "Koneksi gagal, silakan coba lagi", Toast.LENGTH_SHORT).show();
             }
         });
     }

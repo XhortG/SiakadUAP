@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                         tilPassword.setError(response.body().getMessage());
                     }
                 } else {
-                    Snackbar.make(findViewById(android.R.id.content), "Respons server tidak valid", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(android.R.id.content), "Maaf, server akademik sedang sibuk.", Snackbar.LENGTH_SHORT).show();
                 }
             }
 
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
                 btnLogin.setEnabled(true);
-                Snackbar.make(findViewById(android.R.id.content), "Koneksi gagal. Periksa server XAMPP.", Snackbar.LENGTH_INDEFINITE)
+                Snackbar.make(findViewById(android.R.id.content), "Tidak ada koneksi internet. Silakan coba lagi.", Snackbar.LENGTH_INDEFINITE)
                         .setAction("Coba Lagi", v -> loginUser())
                         .show();
             }

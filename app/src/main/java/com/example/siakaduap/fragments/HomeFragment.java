@@ -107,7 +107,7 @@ public class HomeFragment extends Fragment {
                     }
                 } else {
                     if (getView() != null) {
-                        Snackbar.make(getView(), "Respons server tidak valid", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(getView(), "Maaf, server akademik sedang sibuk.", Snackbar.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -116,7 +116,7 @@ public class HomeFragment extends Fragment {
             public void onFailure(Call<PengumumanResponse> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
                 if (getView() != null) {
-                    Snackbar.make(getView(), "Koneksi gagal. Periksa server Anda.", Snackbar.LENGTH_INDEFINITE)
+                    Snackbar.make(getView(), "Tidak ada koneksi internet. Silakan coba lagi.", Snackbar.LENGTH_INDEFINITE)
                             .setAction("Coba Lagi", v -> loadPengumuman())
                             .show();
                 }

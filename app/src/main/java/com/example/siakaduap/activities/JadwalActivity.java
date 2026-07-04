@@ -93,14 +93,14 @@ public class JadwalActivity extends AppCompatActivity {
                         tvEmptyText.setText(response.body().getMessage());
                     }
                 } else {
-                    Snackbar.make(findViewById(android.R.id.content), "Respons server tidak valid", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(android.R.id.content), "Maaf, server akademik sedang sibuk.", Snackbar.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<JadwalResponse> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
-                Snackbar.make(findViewById(android.R.id.content), "Koneksi gagal. Periksa server Anda.", Snackbar.LENGTH_INDEFINITE)
+                Snackbar.make(findViewById(android.R.id.content), "Tidak ada koneksi internet. Silakan coba lagi.", Snackbar.LENGTH_INDEFINITE)
                         .setAction("Coba Lagi", v -> loadJadwal())
                         .show();
             }

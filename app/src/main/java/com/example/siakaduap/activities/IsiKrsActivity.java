@@ -93,7 +93,7 @@ public class IsiKrsActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<MkTersediaResponse> call, Throwable t) {
                 swipeRefresh.setRefreshing(false);
-                Snackbar.make(findViewById(android.R.id.content), "Koneksi gagal", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(android.R.id.content), "Koneksi gagal, silakan coba lagi", Snackbar.LENGTH_SHORT).show();
             }
         });
     }
@@ -134,7 +134,7 @@ public class IsiKrsActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 swipeRefresh.setRefreshing(false);
-                Toast.makeText(IsiKrsActivity.this, "Koneksi gagal", Toast.LENGTH_SHORT).show();
+                Toast.makeText(IsiKrsActivity.this, "Koneksi gagal, silakan coba lagi", Toast.LENGTH_SHORT).show();
             }
         });
     }
