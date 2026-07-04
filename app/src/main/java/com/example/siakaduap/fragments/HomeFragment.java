@@ -107,7 +107,7 @@ public class HomeFragment extends Fragment {
                     }
                 } else {
                     if (getView() != null) {
-                        Snackbar.make(getView(), "Maaf, server akademik sedang sibuk.", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(getView(), "Maaf, server akademik sedang dalam pemeliharaan.", Snackbar.LENGTH_SHORT).show();
                     }
                 }
             }

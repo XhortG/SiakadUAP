@@ -120,7 +120,7 @@ public class BeritaActivity extends AppCompatActivity {
                     }
                 } else {
                     tvEmpty.setVisibility(View.VISIBLE);
-                    tvEmpty.setText("Maaf, server akademik sedang sibuk.");
+                    tvEmpty.setText("Maaf, server akademik sedang dalam pemeliharaan.");
                 }
             }
 

@@ -90,7 +90,7 @@ public class AbsenActivity extends AppCompatActivity {
                         tvEmpty.setText(response.body().getMessage());
                     }
                 } else {
-                    Snackbar.make(findViewById(android.R.id.content), "Maaf, server akademik sedang sibuk.", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(android.R.id.content), "Maaf, server akademik sedang dalam pemeliharaan.", Snackbar.LENGTH_SHORT).show();
                 }
             }
 
